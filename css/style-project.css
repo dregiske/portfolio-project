@@ -10,19 +10,16 @@
 	perspective: 1000px;
 	cursor: pointer;
 }
-  
 #projects .card-inner {
 	position: relative;
 	width: 100%;
 	height: 100%;
 	transition: transform 0.9s;
 	transform-style: preserve-3d;
-}
-  
+} 
 #projects .card:hover .card-inner {
 	transform: rotateY(180deg);
 }
-  
 #projects .card-front,
 #projects .card-back {
 	position: absolute;
@@ -30,17 +27,63 @@
 	height: 100%;
 	backface-visibility: hidden;
 	display: flex;
-	align-items: center;
-	justify-content: center;
+
+	padding: 10px;
+
 	border-radius: 0.5rem;
 }
-  
-#projects .card-front {
-	background: rgb(0, 0, 0);
-}
-  
+
+/* Base */
 #projects .card-back {
 	background: #ff6505;
 	color: white;
 	transform: rotateY(180deg);
+}
+
+.card-front::before { /* gradient tint for text visibility */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.7) 0%,
+    rgba(0,0,0,0) 70%
+  );
+  border-radius: inherit;
+  z-index: 0;
+  pointer-events: none;
+}
+.card-front .content {
+  position: relative; 
+  z-index: 1;                     /* above overlay */
+}
+
+/* Project-1 edit */
+#projects .project-1 .card-front {
+	background-image: url("../images/newspaper-backdrop.webp");
+	background-size: cover;
+	background-repeat: no-repeat;
+	
+	font-size: 2rem;
+	color: rgb(255, 255, 255);
+}
+
+/* Project-2 edit */
+#projects .project-2 .card-front {
+	background-image: url("");
+	background-size: cover;
+	background-repeat: no-repeat;
+	
+	font-size: 2rem;
+	color: rgb(255, 255, 255);
+}
+
+/* Project-3 edit */
+#projects .project-3 .card-front {
+	background-image: url("");
+	background-size: cover;
+	background-repeat: no-repeat;
+	
+	font-size: 2rem;
+	color: rgb(255, 255, 255);
 }
