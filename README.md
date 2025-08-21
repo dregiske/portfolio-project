@@ -19,7 +19,6 @@ This is my portfolio to display myself, my projects, my achievements, and my con
 - Sticky Nav (stays at top when scrolling).
 - Smooth scroll to sections when links are clicked.
 - Menu items: About, Projects, Achievements, Contact.
-- Optional: Highlight the current section as user scrolls.
 
 5. About Me Section
 - Professional photo or avatar on one side, short bio on the other.

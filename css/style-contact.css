@@ -2,9 +2,18 @@
 
 #contact { position: relative; }
 
-.contact-header { display: flex; justify-content: center; }
-.message { margin: 0 0 14px; font-size: 6rem; letter-spacing: 4px; }
+/* Intro message */
+.contact-header {
+	display: flex;
+	justify-content: center;
+}
+.message {
+	margin: 0 0 10px;
+	font-size: 6rem;
+	letter-spacing: 4px;
+}
 
+/* Socials icons */
 #contact .socials {
 	display: flex;
 	position: absolute;
@@ -12,11 +21,9 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
-
 #contact .socials li {
 	list-style: none;
 }
-  
 #contact .socials li a {
 	width: 80px;
 	height: 80px;
@@ -24,7 +31,7 @@
 	text-align: center;
 	line-height: 80px;
 	font-size: 35px;
-	margin: 0 10px;
+	margin: 400px 40px 50px 0;
 	display: block;
 	border-radius: 50%;
 	position: relative;
@@ -32,19 +39,16 @@
 	border: 3px solid #fff;
 	z-index: 1;
 }
-  
 #contact .socials li a .icon {
 	position: relative;
 	color: #262626;
 	transition: .5s;
 	z-index: 3;
 }
-  
 #contact .socials li a:hover .icon {
 	color: #fff;
 	transform: rotateY(360deg);
 }
-  
 #contact .socials li a:before {
 	content: "";
 	position: absolute;
@@ -56,7 +60,6 @@
 	transition: .5s;
 	z-index: 2;
 }
-  
 #contact .socials li a:hover:before {
 	top: 0;
 }

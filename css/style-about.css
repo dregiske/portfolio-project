@@ -57,7 +57,7 @@
 	height: 350px;
 }
 
-/* Side-by-side lists inside about-programming */
+/* about-programming edit */
 .about-programming {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -84,6 +84,7 @@
 
 .about h2 { font-size: clamp(1.6rem, 1.2vw + 1rem, 2rem); margin: 1 1 12px; } /* about-content title */
 .about h3 { margin: 1 1 12px; font-size: 1.2rem; } /* tools */
+
 .about p { line-height: 1.7; color: #eeeeee; margin: 0 0 20px; } /* about-content paragraph */
 .card .list { margin: 1; padding-left: 1.1rem; }
 .card .list li { margin: 6px 0; }

@@ -46,7 +46,7 @@
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0,0,0,0.7) 0%,
+    rgba(0,0,0,0.8) 0%,
     rgba(0,0,0,0) 70%
   );
   border-radius: inherit;
@@ -55,7 +55,7 @@
 }
 .card-front .content {
   position: relative; 
-  z-index: 1;                     /* above overlay */
+  z-index: 1;
 }
 
 /* Project-1 edit */
@@ -79,11 +79,19 @@
 }
 
 /* Project-3 edit */
-#projects .project-3 .card-front {
-	background-image: url("");
+.project-3 .card-front {
+	background-image: url("../images/cards-backdrop.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	
 	font-size: 2rem;
 	color: rgb(255, 255, 255);
+}
+.project-3 .card-back h3 {
+	font-size: 3rem;
+	padding: 0 0 20px 20px;
+}
+.project-3 .card-back p {
+	font-size: 1.5rem;
+	padding: 0 0 20px 20px;
 }
