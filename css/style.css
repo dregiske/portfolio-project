@@ -1,0 +1,110 @@
+/* css/style.css
+
+/* General reset to remove default browser spacing */
+body, html {
+	margin: 0;
+	padding: 0;
+	font-family: Avenir, Montserrat, Corbel, 
+				 'URW Gothic', source-sans-pro, sans-serif;
+	background-color: #828282;
+	color: #fff;
+	height: 100%;
+}
+/* padding in between sections */
+.section {
+	padding: 96px 20px;
+}
+
+/* NAV SECTION */
+/* Smooth scrolling for anchor links */
+html {
+	scroll-behavior: smooth;
+}
+.site-header {
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	backdrop-filter: blur(8px);
+	background: rgba(13, 13, 13, 0.6);
+	border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.site-nav {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0.75rem 1rem;
+}
+.site-nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	margin: 0;
+	padding: 0;
+}
+.site-nav a {
+	text-decoration: none;
+	color: #eaeaea;
+	font-weight: 500;
+	letter-spacing: 0.3px;
+	padding: 0.25rem 0.1rem;
+	position: relative;
+}
+.site-nav a::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -6px;
+	width: 0%;
+	height: 2px;
+	background: #fff;
+	transition: width 200ms ease;
+	opacity: 0.9;
+}
+.site-nav a:hover::after,
+  	.site-nav a.active::after {
+		width: 100%;
+}
+/* header subtle shadow once you scroll */
+.site-header.scrolled {
+	box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+/* Make sure anchored sections don’t hide under sticky header */
+section[id] {
+	scroll-margin-top: 80px;
+}
+/* Responsive tweak */
+@media (max-width: 640px) {
+	.site-nav ul { gap: 1rem; }
+}
+  
+/* HERO SECTION */
+.hero {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	text-align: center;
+	background: linear-gradient(135deg, #1f1f1f, #2d2d2d);
+}
+.hero .name {
+	font-size: 7rem;
+	font-weight: 300;
+	letter-spacing: 2px;
+	margin: 0;
+	animation: fadeInDown 1.5s ease forwards;
+}
+.hero .role {
+	font-size: 1.5rem;
+	font-weight: 300;
+	margin-top: 5px;
+	color: #f66b00;
+	animation: fadeInUp 2.5s ease forwards;
+}
+@keyframes fadeInDown {
+	from { opacity: 0; transform: translateY(-20px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+	from { opacity: 0; transform: translateY(20px); }
+	to { opacity: 1; transform: translateY(0); }
+}
