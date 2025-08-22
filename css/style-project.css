@@ -79,7 +79,7 @@
 
 /* Project-2 edit */
 #projects .project-2 .card-front {
-	background-image: url("");
+	background-image: url("../images/stock-backdrop.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	
@@ -98,7 +98,7 @@
 
 /* Project-3 edit */
 .project-3 .card-front {
-	background-image: url("../images/cards-backdrop.jpg");
+	background-image: url("../images/cards-v2-backdrop.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 	
