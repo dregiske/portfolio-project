@@ -68,6 +68,15 @@
 	color: rgb(255, 255, 255);
 }
 
+.project-1 .card-back h3 {
+	font-size: 3rem;
+	padding: 0 0 20px 20px;
+}
+.project-1 .card-back p {
+	font-size: 1.5rem;
+	padding: 0 0 20px 20px;
+}
+
 /* Project-2 edit */
 #projects .project-2 .card-front {
 	background-image: url("");
@@ -76,6 +85,15 @@
 	
 	font-size: 2rem;
 	color: rgb(255, 255, 255);
+}
+
+.project-2 .card-back h3 {
+	font-size: 3rem;
+	padding: 0 0 20px 20px;
+}
+.project-2 .card-back p {
+	font-size: 1.5rem;
+	padding: 0 0 20px 20px;
 }
 
 /* Project-3 edit */

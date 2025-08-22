@@ -84,7 +84,8 @@ section[id] {
 	align-items: center;
 	height: 100vh;
 	text-align: center;
-	background: linear-gradient(135deg, #1f1f1f, #2d2d2d);
+	background-image: url(../images/wave-backdrop.jpg);
+	/*background: linear-gradient(135deg, #1f1f1f, #2d2d2d);*/
 }
 .hero .name {
 	font-size: 7rem;
