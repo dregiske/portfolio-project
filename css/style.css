@@ -23,10 +23,9 @@ html {
 .site-header {
 	position: sticky;
 	top: 0;
-	z-index: 1000;
+	z-index: 0;
 	backdrop-filter: blur(8px);
-	background: rgba(13, 13, 13, 0.6);
-	border-bottom: 1px solid rgba(255,255,255,0.06);
+	background: transparent;
 }
 .site-nav {
 	max-width: 1100px;
@@ -64,10 +63,7 @@ html {
   	.site-nav a.active::after {
 		width: 100%;
 }
-/* header subtle shadow once you scroll */
-.site-header.scrolled {
-	box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-}
+
 /* Make sure anchored sections don’t hide under sticky header */
 section[id] {
 	scroll-margin-top: 80px;
@@ -82,10 +78,13 @@ section[id] {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
+	height: 110vh;
 	text-align: center;
+	margin-top: -50px;
+
 	background-image: url(../images/wave-backdrop.jpg);
-	/*background: linear-gradient(135deg, #1f1f1f, #2d2d2d);*/
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 .hero .name {
 	font-size: 7rem;
