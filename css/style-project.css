@@ -104,3 +104,9 @@
 .project-3 .card-front {
 	background-image: url("../images/cards-v2-backdrop.png");
 }
+
+@media (max-width: 800px) {
+	#projects .card-back .tags {
+		display: none;
+	}
+}
