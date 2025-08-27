@@ -80,6 +80,11 @@
 	padding: 20px 20px 20px 20px;
 	color: white;
 }
+.card-back .tags {
+	display: block;
+	padding: 0 20px 0 20px;
+	margin: 45px 0 0 0;
+}
 
 #projects .card:hover .card-front,
 #projects .card:focus-within .card-front {
@@ -105,7 +110,13 @@
 	background-image: url("../images/cards-v2-backdrop.png");
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
+	#projects .card-back .title {
+		font-size: 2rem;
+	}
+	#projects .card-back .content {
+		font-size: 1rem;
+	}
 	#projects .card-back .tags {
 		display: none;
 	}
