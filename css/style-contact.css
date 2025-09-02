@@ -1,12 +1,14 @@
 /* css/style-contact.css */
 
-#contact { position: relative; }
+#contact { padding-bottom: 20px; }
 
 /* Intro message */
 .contact-header {
+	margin-top: 150px;
 	display: flex;
 	justify-content: center;
 }
+
 .message {
 	margin: 10px 0 10px;
 	font-size: 6rem;
@@ -15,63 +17,95 @@
 
 /* Socials icons */
 #contact .socials {
-	display: flex;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+  margin: 80px;
+  padding: 0;
+  position: static;
+  transform: none;
 }
+
 #contact .socials li {
-	list-style: none;
+  list-style: none;
 }
+
+/* Base circle button */
 #contact .socials li a {
-	width: 80px;
-	height: 80px;
-	background-color: #fff;
-	text-align: center;
-	line-height: 80px;
-	font-size: 35px;
-	margin: 400px 40px 50px 0;
-	display: block;
-	border-radius: 50%;
-	position: relative;
-	overflow: hidden;
-	border: 3px solid #fff;
-	z-index: 1;
+  width: 100px;
+  height: 100px;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.25) inset;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
 }
+
+#contact .socials li a img,
 #contact .socials li a .icon {
-	position: relative;
-	color: #262626;
-	transition: .5s;
-	z-index: 3;
+  width: 65%;
+  height: 65%;
+  object-fit: contain;
+  line-height: 1;
+  transition: transform 0.35s ease, filter 0.35s ease, color 0.35s ease;
 }
+
+/* Ripple / color wash layer */
+#contact .socials li a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, var(--brand, #ffffff) 0%, transparent 60%);
+  opacity: 0;
+  transform: scale(0.4);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  z-index: 0;
+  mix-blend-mode: screen;
+}
+
+/* Hover: lift, glow, subtle tilt */
+#contact .socials li a:hover {
+  transform: translateY(-8px) scale(1.06);
+  box-shadow:
+    0 12px 28px rgba(0,0,0,0.45),
+    0 0 22px color-mix(in oklab, var(--brand, #fff) 40%, transparent);
+  border-color: color-mix(in oklab, var(--brand, #fff) 45%, rgba(255,255,255,0.18));
+}
+
+#contact .socials li a:hover::before {
+  opacity: 0.9;
+  transform: scale(1.15);
+}
+
+/* Logo motion on hover */
+#contact .socials li a:hover img,
 #contact .socials li a:hover .icon {
-	color: #fff;
-	transform: rotateY(360deg);
+  transform: scale(1.12) rotate(6deg);
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.35));
+  color: #fff;
 }
-#contact .socials li a:before {
-	content: "";
-	position: absolute;
-	top: 100%;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: #f00;
-	transition: .5s;
-	z-index: 2;
-}
-#contact .socials li a:hover:before {
-	top: 0;
-}
-#contact .socials li:nth-child(1) a:before{
-	background: #3b5999;
-}
-#contact .socials li:nth-child(2) a:before{
-	background: #55acee;
-}
-#contact .socials li:nth-child(3) a:before {
-	background: #0077b5;
-}
-#contact .socials li:nth-child(4) a:before {
-	background: #dd4b39;
+
+/* Brand accents per item (set via CSS var) */
+#contact .socials li:nth-child(1) a { --brand: #5865F2; }  /* Discord */
+#contact .socials li:nth-child(2) a { --brand: #0A66C2; }  /* LinkedIn */
+#contact .socials li:nth-child(3) a { --brand: #fff; }     /* GitHub (white glow) */
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  #contact .socials li a,
+  #contact .socials li a::before,
+  #contact .socials li a img,
+  #contact .socials li a .icon {
+    transition: none;
+    transform: none;
+  }
 }
