@@ -1,4 +1,4 @@
-# Andre Giske - Portfolio 2025
+# Andre Giske - Portfolio 2025 (OLD)
 
 This is my portfolio to display myself, my projects, my achievements, and my contact
 
